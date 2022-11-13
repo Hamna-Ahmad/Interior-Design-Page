@@ -1,0 +1,168 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://1.bp.blogspot.com/-N6w-4tMd_iI/XjL4b0_gmCI/AAAAAAAAASQ/Dz-DeJ87JU413xwnl9iEpLUgmfV_fwwkQCLcBGAsYHQ/s1600/luxury-penthouse-living-room-045a8e575965ca60.jpg');
+  background-size: cover;
+  background-position:center;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  height:auto;
+  cursor: pointer;
+}
+
+/* Tablet Landscape */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .logo{
+    width: 100px;
+  }
+}
+  
+/* Tablet */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .logo{
+    width: 80px;
+  }
+}
+
+/* Phone */
+@media all and (max-width: 480px) {
+  .logo{
+    width: 60px;
+  }
+}
+
+
+/* Navigation Bar */
+.navbar {
+  width: 95%;
+  margin:auto;
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items:top;
+}
+
+.navbar ul li{
+  list-style: none;
+  display:inline-block;
+  margin: 0 20px;
+  position:relative;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: #009688;
+  position: absolute;
+  left:0;
+  bottom:-10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width:100%;
+}
+
+.navbar ul li a{
+  text-decoration:none;
+  color:#fff;
+  text-transform:uppercase;
+}
+
+@media all and (max-width: 690px) {
+  .navbar ul li::after{
+    display:none;
+  }
+  .navbar ul li a:hover {
+    color:#009688;
+    font-weight:bold;
+  }
+}
+
+/* Content */
+.content{
+  width:100%;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%); /*Vertically centered*/
+  text-align:center;
+  color:#fff;
+}
+
+.content h1{
+  font-size: 70px;
+  margin-top:80px;
+}
+
+/* Tablet Landscape */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .content h1{
+    font-size: 50px;
+  }
+}
+  
+/* Tablet */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .content h1{
+    font-size: 40px;
+  }
+}
+
+/* Phone */
+@media all and (max-width: 480px) {
+  .content h1{
+    font-size: 30px;
+  }
+}
+
+.content p{
+  margin: 20px 0;
+  font-weight:100px;
+  line-height:25px;
+} 
+
+ /* Button */
+button{
+  width: 200px;
+  padding: 15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius:25px;
+  font-weight:bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color:#fff;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+
+span {
+  background:#009688;
+  height:100%;
+  width:0%;
+  border-radius:25px;
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  z-index:-1;
+  transition:0.5s;
+}
+
+button:hover span{
+  width:100%;
+}
+
+button:hover {
+  border: none;
+}
